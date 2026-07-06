@@ -20,7 +20,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: gradle
     
     - name: Clone NFCGate v2.4.3
       run: |
