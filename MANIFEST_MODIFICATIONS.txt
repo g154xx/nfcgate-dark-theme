@@ -1,0 +1,48 @@
+# AndroidManifest.xml CHANGES for NFCGate v2.4.3 Dark Theme
+
+## Modify the <application> tag attributes:
+
+<!-- ORIGINAL: -->
+<application
+    android:allowBackup="false"
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    ...>
+
+<!-- KEEP THIS EXACTLY - Don't remove icon! -->
+<!-- The icon MUST stay visible in launcher -->
+android:icon="@mipmap/ic_launcher"
+
+## Main Activity Configuration:
+
+<activity
+    android:name=".MainActivity"
+    android:exported="true"
+    android:theme="@style/AppTheme"
+    android:screenOrientation="portrait">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+## Settings Activity:
+
+<activity
+    android:name=".SettingsActivity"
+    android:theme="@style/SettingsTheme"
+    android:label="@string/button_settings" />
+
+## All Activities should use:
+android:theme="@style/AppTheme"
+
+This ensures the dark theme with green text applies globally.
+
+## Summary of changes:
+1. ✓ App name stays "NFCGate" - visible in launcher
+2. ✓ Icon KEPT - visible in drawer
+3. ✓ Theme applied to all activities
+4. ✓ Dark background (#000000) with green text (#00ff41)

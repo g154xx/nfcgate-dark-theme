@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Application Theme - Dark with Green Accents -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        
+        <!-- Accent/Secondary Colors - Green -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        
+        <!-- Background -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        
+        <!-- Window/Status Bar -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        
+        <!-- Component Colors -->
+        <item name="buttonStyle">@style/CustomButton</item>
+        <item name="materialButtonOutlinedStyle">@style/CustomOutlinedButton</item>
+    </style>
+    
+    <!-- Custom Button Style -->
+    <style name="CustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/button_background</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!-- Custom Outlined Button -->
+    <style name="CustomOutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/accent</item>
+        <item name="strokeColor">@color/accent</item>
+    </style>
+    
+    <!-- Toolbar Style -->
+    <style name="AppToolbar" parent="Widget.MaterialComponents.AppBarLayoutPrimary">
+        <item name="android:background">@color/primary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+    
+    <!-- Card View Style -->
+    <style name="AppCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+    
+    <!-- Text Input Field Style -->
+    <style name="AppEditText" parent="Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+    
+    <!-- Settings Activity Theme -->
+    <style name="SettingsTheme" parent="AppTheme">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+    
+    <!-- Dialog Theme -->
+    <style name="AppDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:windowBackground">@color/surface</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+    
+</resources>

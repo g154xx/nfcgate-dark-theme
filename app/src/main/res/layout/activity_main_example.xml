@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EXEMPLU - Cum va arăta o activitate cu tema dark-verde -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Toolbar cu tema dark -->
+    <com.google.android.material.appbarayout.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="4dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            android:elevation="4dp"
+            app:title="NFCGate"
+            app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbarayout.AppBarLayout>
+
+    <!-- Scroll Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card cu status -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/status_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ready"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Buttons Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:spacing="8dp">
+
+                <!-- Capture Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/menu_capture"
+                    android:textColor="@color/text_primary"
+                    app:backgroundTint="@color/button_background"
+                    app:cornerRadius="4dp" />
+
+                <!-- Relay Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_relay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/menu_relay"
+                    android:textColor="@color/text_primary"
+                    app:backgroundTint="@color/button_background"
+                    app:cornerRadius="4dp" />
+
+                <!-- Replay Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/menu_replay"
+                    android:textColor="@color/text_primary"
+                    app:backgroundTint="@color/button_background"
+                    app:cornerRadius="4dp" />
+
+                <!-- Clone Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_clone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_clone"
+                    android:textColor="@color/text_primary"
+                    app:backgroundTint="@color/button_background"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+
+            <!-- Settings Button (Outlined) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/button_settings"
+                android:textColor="@color/accent"
+                app:borderWidth="1dp"
+                app:cornerRadius="4dp"
+                app:strokeColor="@color/accent" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+<!-- VISUAL RESULT:
+     ━━━━━━━━━━━━━━━━━━━━━━━
+     │ NFCGate              │  ← Titlu VERDE (#00ff41)
+     ━━━━━━━━━━━━━━━━━━━━━━━
+     │                      │
+     │ ┌──────────────────┐ │
+     │ │ Status           │ │  ← Card gri (#1a1a1a) pe NEGRU (#000000)
+     │ │ Ready            │ │
+     │ └──────────────────┘ │
+     │                      │
+     │ ┌──────────────────┐ │
+     │ │ Capture          │ │  ← Butoane cu accent VERDE
+     │ └──────────────────┘ │
+     │ ┌──────────────────┐ │
+     │ │ Relay            │ │
+     │ └──────────────────┘ │
+     │ ┌──────────────────┐ │
+     │ │ Replay           │ │
+     │ └──────────────────┘ │
+     │ ┌──────────────────┐ │
+     │ │ Clone            │ │
+     │ └──────────────────┘ │
+     │                      │
+     │ [Settings]           │  ← Outlined button cu VERDE
+     │                      │
+     ━━━━━━━━━━━━━━━━━━━━━━━
+-->
